@@ -2,7 +2,7 @@
 
 This document aims to outline the essential steps for getting up-and-running as quickly as possible on the Pittsburgh Supercomputing Center (PSC) and Bridges-2, with a particular focus on running parallel computation in Python and R.
 
-These notes should be treated as an application-focused complement to the[official documentation](https://portal.xsede.org/psc-bridges-2#running-sbatch) rather than a substitute.
+These notes should be treated as a specific application-focused complement to the [official documentation](https://portal.xsede.org/psc-bridges-2#running-sbatch) rather than a substitute.
 
 This document is a work in progress. Please feel free to contribute to it by submitting a pull request. 
 
