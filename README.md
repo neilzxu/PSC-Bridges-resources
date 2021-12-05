@@ -36,9 +36,9 @@ You will be prompted for your XSEDE credentials. Use your XSEDE User Portal pass
 
 ### Parallel computation
 
-#### [Python](examples/python/parallel/README.md) 
+#### [Python](examples/python/python_parallel/README.md) 
 
-#### [R](examples/R/parallel/README.md)
+#### [R](examples/R/R_parallel/README.md)
 
 ## Advanced
 
