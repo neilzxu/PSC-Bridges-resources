@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -p EM
+#SBATCH -N 1
+#SBATCH -n 24
+#SBATCH --mem 5GB
+#SBATCH -t 00:01:00
+#SBATCH --mail-type=ALL
+
+Rscript parallel.R
