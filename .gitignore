@@ -1,3 +1,7 @@
+# Slurm output files
+slurm-*.out
+
+# flake8 specifications for python files
 .flake8
 
 # Byte-compiled / optimized / DLL files
