@@ -1,6 +1,6 @@
 # Parallel Python example
 
-First install the `multiprocess` package which allows more flexibility in objects and functions that can be used for concurrency. The native `multiprocessing` package restricts what kind of functions can be passed to its concurrent processing calls (e.g instance methods) with
+First install the `multiprocess` package which allows more flexibility in objects and functions that can be used for concurrency. The native `multiprocessing` package restricts what kind of functions can be passed to its concurrent processing calls (e.g instance methods). Install using
 
 ```
 pip install multiprocess
