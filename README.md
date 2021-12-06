@@ -119,11 +119,7 @@ For a comprehensive list, see <https://portal.xsede.org/psc-bridges-2#running-sb
 
 ### Parallel computation
 
-In this section, we will perform parallel computations with examples in both Python and R, alongside an appropriately designed Slurm job batch script.
-
-#### Python
-
-We will recreate the example from [examples/python/python_parallel](examples/python/python_parallel).
+In this section, we will perform parallel computations with examples in both Python and R, alongside an appropriately designed slurm job batch script.
 
 First, log into Bridges-2.
 
@@ -138,6 +134,14 @@ Now clone this repository wherever you keep your projects.
 git clone https://github.com/WannabeSmith/PSC-Bridges-resources.git
 ```
 
+Using either Python or R, we will be running a function `slow_successor(i)` which simply returns `i+1` but with a time delay. We will run this function on the integers 0 through 99, using parallel and non-parallel implementations to see the difference in computation time.
+
+To use Python, continue on to the next section. To use R, jump to [r](#r). 
+
+#### Python
+
+We will recreate the example from [examples/python/python_parallel](examples/python/python_parallel).
+
 Enter the folder `examples/python/python_parallel`.
 
 ``` bash
@@ -146,7 +150,7 @@ cd examples/python/python_parallel
 
 We will be running a rather simple function `slow_successor(i)` which simply returns `i+1` but with a time delay. We will run this function on the integers 0 through 99, using parallel and non-parallel implementations to see the difference in computation time.
 
-Our slurm batch script (`jobscript.job`) is written as the following.
+Our slurm batch script `jobscript.job` is written as the following.
 
 ``` bash
 # jobscript.job
@@ -210,13 +214,13 @@ print(
 )
 ```
 
-We can now run `parallel.py` using the resources allocated via `jobscript.job` using the `sbatch` command.
+We can now run `parallel.py` using the resources allocated via `jobscript.job` with the `sbatch` command.
 
 ``` bash
 sbatch jobscript.job
 ```
 
-Running `sbatch` will submit a job with particular job ID (e.g. 5433928). The output from the job will then be written to `slurm-<jobid>.out` (e.g. `slurm-5433928.out`). The output from `jobscript.job` should look something like
+Running `sbatch` will submit a job with particular job ID (e.g. 1234567). The output from the job will then be written to `slurm-<jobid>.out` (e.g. `slurm-1234567.out`). The output from `jobscript.job` should look something like
 
 ```
 Non-parallel compute time: 10.018450498580933 seconds.
@@ -226,7 +230,88 @@ Parallel compute time on 96 cores: 0.3378734588623047 seconds
 
 #### R
 
-TODO
+We will recreate the example from [examples/R/R_parallel](examples/R/R_parallel).
+
+
+Enter the folder `examples/R/R_parallel`.
+
+``` bash
+cd examples/R/R_parallel
+```
+
+
+Our slurm batch script `jobscript.job` is written as the following.
+
+``` bash
+# jobscript.job
+
+#!/bin/bash
+#SBATCH -p EM
+#SBATCH -N 1
+#SBATCH -n 24
+#SBATCH --mem 5GB
+#SBATCH -t 00:01:00
+#SBATCH --mail-type=ALL
+
+Rscript parallel.R
+```
+
+The above batch script requests several resources, and runs an R script `parallel.R`. This file `parallel.R` is written as follows.
+
+``` R
+# parallel.R
+
+library(parallel)
+
+
+# An intentionally slow function that we wish to parallelize
+slow_successor <- function(i)
+{
+  Sys.sleep(0.1)
+  return(i + 1)
+}
+
+
+# We will run `slow_successor` on the numbers 0 through num_iterations-1.
+num_iterations <- 100
+
+
+# Non-parallel implementation:
+start_time <- Sys.time()
+result <- unlist(lapply(1:num_iterations, slow_successor))
+end_time <- Sys.time()
+
+time_elapsed <- difftime(end_time, start_time, units = "secs")
+
+print(paste("Non-parallel compute time:", time_elapsed, "seconds."))
+
+
+# Parallel implementation:
+n_cores <- detectCores()
+
+start_time <- Sys.time()
+result <- unlist(mclapply(0:(num_iterations-1), slow_successor, mc.cores=n_cores))
+end_time <- Sys.time()
+
+time_elapsed <- difftime(end_time, start_time, units = "secs")
+
+print(paste("Parallel compute time on", n_cores, "cores:", time_elapsed, "seconds."))
+
+```
+
+#### Running the Python or R script via `sbatch`
+We can now run our Python or R script using the resources allocated via `jobscript.job` with the `sbatch` command.
+
+``` bash
+sbatch jobscript.job
+```
+
+Running `sbatch` will submit a job with particular job ID (e.g. 1234567). The output from the job will then be written to `slurm-<jobid>.out` (e.g. `slurm-1234567.out`). The output from `jobscript.job` should look something like
+
+```
+Non-parallel compute time: 10.018450498580933 seconds.
+Parallel compute time on 96 cores: 0.3378734588623047 seconds.
+```
 
 ## Advanced
 

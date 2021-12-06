@@ -33,5 +33,5 @@ print(
     + str(n_cores)
     + " cores: "
     + str(end_time - start_time)
-    + str(" seconds")
+    + str(" seconds.")
 )
