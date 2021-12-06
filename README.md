@@ -19,6 +19,7 @@ This document is a work in progress. Please feel free to contribute to it by sub
     - [Parallel computation](#parallel-computation)
         - [Python](#python)
         - [R](#r)
+        - [Running the Python or R script via `sbatch`](#running-the-python-or-r-script-via-sbatch)
 - [Advanced](#advanced)
 
 <!-- markdown-toc end -->
