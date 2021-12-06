@@ -310,4 +310,4 @@ Parallel compute time on 96 cores: 0.3378734588623047 seconds.
 
 TODO
 
-**_Warning:_** TODO add warning about randomness when parallelizing in Python
+**_Warning:_** TODO add warning about random number generation when parallelizing with numpy
