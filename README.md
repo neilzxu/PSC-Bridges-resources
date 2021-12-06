@@ -53,9 +53,9 @@ ssh -p 2222 <username>@bridges2.psc.edu
 You will be prompted for your XSEDE credentials. Use your XSEDE User Portal password.
 
 
-### Creating a Slurm job batch script
+### Creating a slurm job batch script
 
-Bridges-2 uses a job-scheduling system called "Slurm", providing a way for users like ourselves to request specific resources for our compute jobs and automatically launch jobs once said resources have become available.
+Bridges-2 uses a job-scheduling system called "slurm", providing a way for users like ourselves to request specific resources for our compute jobs and automatically launch jobs once said resources have become available.
 
 Jobs are submitted using the `sbatch` command along with a **batch script** which we must create. 
 
