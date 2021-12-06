@@ -6,7 +6,7 @@ To run `parallel.py` using the resources requested by `jobscript.job`, use the `
 sbatch jobscript.job
 ```
 
-Example output:
+Example output (to be found in `slurm-<jobid>.out`):
 
 ```
 Non-parallel compute time: 10.018450498580933 seconds.
