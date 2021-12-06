@@ -115,6 +115,12 @@ Some common options are given in the following table.
 
 For a comprehensive list, see <https://portal.xsede.org/psc-bridges-2#running-sbatch>.
 
+"LOAD MODULES" is where you load the required modules to run your scripts. For example, loading python often requires a conda environment. To see the list of all possible modules, you can run `module avail`.
+
+"RUN SCRIPTS" is where you run your python/R/julia/etc. scripts. If executed correctly, these scripts will have access to the resources requested by the batch script. 
+
+Let's see some of these ideas used in a parallel computing example.
+
 ### Parallel computation
 
 In this section, we will perform parallel computations using the examples in [examples](examples) with implementations in both Python and R, alongside an appropriately designed slurm job batch script.
