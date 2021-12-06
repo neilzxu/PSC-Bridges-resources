@@ -15,7 +15,7 @@ This document is a work in progress. Please feel free to contribute to it by sub
     - [Getting added to an existing allocation](#getting-added-to-an-existing-allocation)
 - [Running your first job](#running-your-first-job)
     - [Logging into Bridges2/PSC via `ssh`](#logging-into-bridges2psc-via-ssh)
-    - [Creating a Slurm job batch script](#creating-a-slurm-job-batch-script)
+    - [Creating a slurm job batch script](#creating-a-slurm-job-batch-script)
     - [Parallel computation](#parallel-computation)
         - [Python](#python)
         - [R](#r)
