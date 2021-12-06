@@ -1,6 +1,6 @@
-import multiprocessing
 import time
 
+import multiprocess as mp
 
 def slow_successor(i):
     """
@@ -22,9 +22,9 @@ print("Non-parallel compute time: " + str(end_time - start_time) + " seconds.")
 
 
 # Parallel implementation:
-n_cores = multiprocessing.cpu_count()
+n_cores = mp.cpu_count()
 start_time = time.time()
-with multiprocessing.Pool(n_cores) as p:
+with mp.Pool(n_cores) as p:
     result = p.map(slow_successor, range(num_iterations))
 end_time = time.time()
 
