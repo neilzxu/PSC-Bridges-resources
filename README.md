@@ -129,7 +129,7 @@ git clone https://github.com/WannabeSmith/PSC-Bridges-resources.git
 
 Using either Python or R, we will be running a function `slow_successor(i)` which simply returns `i+1` but with a time delay. We will run this function on the integers 0 through 99, using parallel and non-parallel implementations to see the difference in computation time.
 
-To use Python, continue on to the next section. To use R, jump to [r](#r). 
+To use Python, continue on to the next section. To use R, jump to [R](#r). 
 
 #### Python
 
