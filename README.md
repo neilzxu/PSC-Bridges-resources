@@ -4,7 +4,7 @@ This document aims to outline the essential steps for getting up-and-running as 
 
 These notes should be treated as a specific application-focused complement to the [official documentation](https://portal.xsede.org/psc-bridges-2#running-sbatch) rather than a substitute.
 
-This document is a work in progress. Please feel free to contribute to it by submitting a pull request. 
+This document is a work in progress. Please feel free to contribute to it by submitting a[pull request](https://github.com/WannabeSmith/PSC-Bridges-resources/pulls) 😊. 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
