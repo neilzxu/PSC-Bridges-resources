@@ -100,7 +100,7 @@ python myscript.py
 Rscript myscript.R
 ```
 
-The arguments listed under "REQUEST RESOURCES" is where you will request specific resources such as the partition of your allocation to run on (e.g. RM or EM for regular memory or extreme memory, respectively), the amount of compute time, the number of nodes, the number of cores, and so on.
+The area under "REQUEST RESOURCES" is where we request specific resources such as the partition of your allocation to run on (e.g. RM or EM for regular memory or extreme memory, respectively), the amount of compute time, the number of nodes, the number of cores, and so on.
 
 Some common options are given in the following table.
 
