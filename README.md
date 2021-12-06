@@ -51,9 +51,6 @@ ssh -p 2222 <username>@bridges2.psc.edu
 
 You will be prompted for your XSEDE credentials. Use your XSEDE User Portal password.
 
-**_Tip:_** TODO Add tip about .bashrc etc.
-
-**_Warning:_** TODO add warning about randomness when parallelizing
 
 ### Creating a Slurm job batch script
 
@@ -121,16 +118,12 @@ For a comprehensive list, see <https://portal.xsede.org/psc-bridges-2#running-sb
 
 In this section, we will perform parallel computations with examples in both Python and R, alongside an appropriately designed slurm job batch script.
 
-First, log into Bridges-2.
+Clone this repository wherever you keep your projects on bridges2.psc.edu.
 
 ``` bash
-ssh -p 2222 <username>@bridges2.psc.edu
-```
-
-Now clone this repository wherever you keep your projects.
-
-``` bash
+# After logging into bridges2.psc.edu.
 # In my/projects/folder
+
 git clone https://github.com/WannabeSmith/PSC-Bridges-resources.git
 ```
 
@@ -316,3 +309,5 @@ Parallel compute time on 96 cores: 0.3378734588623047 seconds.
 ## Advanced
 
 TODO
+
+**_Warning:_** TODO add warning about randomness when parallelizing in Python
