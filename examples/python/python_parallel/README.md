@@ -1,8 +1,10 @@
 # Parallel Python example
 
-First install the `multiprocess` package which allows more flexibility in objects and functions that can be used for concurrency. The native `multiprocessing` package restricts what kind of functions can be passed to its concurrent processing calls (e.g instance methods)
+First install the `multiprocess` package which allows more flexibility in objects and functions that can be used for concurrency. The native `multiprocessing` package restricts what kind of functions can be passed to its concurrent processing calls (e.g instance methods) with
 
-`pip install multiprocess`
+```
+pip install multiprocess
+```
 
 
 To run `parallel.py` using the resources requested by `jobscript.job`, use the `sbatch` command:
