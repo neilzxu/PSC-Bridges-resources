@@ -1,4 +1,4 @@
-<h1> Zero to Hero: XSEDE, PSC, and Bridges-2  </h1>
+<h1> Crash course: parallelization on XSEDE/PSC/Bridges-2  </h1>
 
 This document aims to outline the essential steps for getting up-and-running as quickly as possible on the Pittsburgh Supercomputing Center (PSC) and Bridges-2, with a particular focus on running parallel computation in Python and R.
 
