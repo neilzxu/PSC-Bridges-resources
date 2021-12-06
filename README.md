@@ -76,7 +76,7 @@ conda activate
 python parallel.py
 ```
 
-The above script requests the Extreme Memory (EM) partition, with one node, 24 cores, 5GB of memory, for 1 minute, and sends email to the job runner once the script begins/finishes/fails/etc. This script then loads a `conda` environment and runs a python script called `parallel.py` which we will discuss in the [python](#python) example.
+The above script requests the Extreme Memory (EM) partition, with one node, 24 cores, 5GB of memory, for 1 minute, and sends an email to the job runner once the script begins/finishes/fails/etc. This script then loads a `conda` environment and runs a python script called `parallel.py` which we will discuss in the [python](#python) example.
 
 More generally, these batch scripts take the following form.
 
