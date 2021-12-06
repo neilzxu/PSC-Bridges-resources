@@ -116,7 +116,7 @@ For a comprehensive list, see <https://portal.xsede.org/psc-bridges-2#running-sb
 
 ### Parallel computation
 
-In this section, we will perform parallel computations using the examples in [examples](examples) with examples in both Python and R, alongside an appropriately designed slurm job batch script.
+In this section, we will perform parallel computations using the examples in [examples](examples) with implementations in both Python and R, alongside an appropriately designed slurm job batch script.
 
 Clone this repository wherever you keep your projects on bridges2.psc.edu.
 
